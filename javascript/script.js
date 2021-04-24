@@ -61,6 +61,7 @@ function buildPass() {
   var tempPass = "";
 
   //for loop to create and concat a temp password based on the given characterSet
+  if (passLength >= 8 && passLength <= 128) {
   for (var i = 0; i < passLength; i++) {
     tempPass = tempPass.concat(
       characterSet.charAt(Math.random() * characterSet.length)
