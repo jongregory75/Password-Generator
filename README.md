@@ -2,7 +2,7 @@
 
 ## Motivation
 
-As a web developer, we'll likely come across the need to generate random passwords for users to login to an application.  This code will generate a random password from user defined inputs.
+As a web developer, we'll come across the need to generate random passwords for users to login to an application. This code will generate a random password from user defined inputs.
 
 ## User Story
 
@@ -43,7 +43,7 @@ THEN the password is either displayed in an alert or written to the page
 
 Javascript, string manipulation
 
-
 ### External Links to Repository / Site:
 
-
+https://github.com/jongregory75/Password-Generator
+https://jongregory75.github.io/Password-Generator/
