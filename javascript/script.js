@@ -5,7 +5,6 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var zeroNine = "0123456789";
 var specials = "!@#$%^&*()";
 var characterSet = "";
-var tempPass = "";
 var passLength = "0";
 
 function buildCharSet() {
@@ -46,6 +45,7 @@ function buildCharSet() {
     characterSet = characterSet + lowerCase;
   }
 
+  //If password should include numbers
   if (zeroNine) {
     characterSet = characterSet + zeroNine;
   }
@@ -58,22 +58,19 @@ function buildCharSet() {
 
 function buildPass() {
   //set tempPass to empty
-  tempPass = "";
+  var tempPass = "";
 
-  //check passLength requirement
-  if (passLength >= 8 && passLength <= 128) {
-    //for loop to create and concat a temp password based on the given characterSet
-    for (var i = 0; i < passLength; i++) {
-      console.log("buildPass for-loop: " + passLength);
-
-      tempPass = tempPass.concat(
-        characterSet.charAt(Math.random() * characterSet.length)
-      );
-    }
-    password = tempPass;
+  //for loop to create and concat a temp password based on the given characterSet
+  for (var i = 0; i < passLength; i++) {
+    tempPass = tempPass.concat(
+      characterSet.charAt(Math.random() * characterSet.length)
+    );
   }
+  //assign value of tempPass back into Global scope variable
+  password = tempPass;
 }
 
+//control function returns password for writePassword function
 function generatePassword() {
   buildCharSet();
   buildPass();
