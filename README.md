@@ -46,4 +46,5 @@ Javascript, string manipulation
 ### External Links to Repository / Site:
 
 https://github.com/jongregory75/Password-Generator
+
 https://jongregory75.github.io/Password-Generator/
